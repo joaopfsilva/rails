@@ -106,6 +106,7 @@ module ActionDispatch
           path_name = :"#{name}_path"
           url_name  = :"#{name}_url"
 
+          puts "welcome to the magic world!! :) "
           if routes.key? key
             puts "inside if routes.key? key : #{key}"
             @path_helpers_module.send :undef_method, path_name
