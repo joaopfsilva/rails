@@ -136,8 +136,9 @@ module ActionDispatch
         end
 
         def get(name)
-          routes[name.to_sym]
           puts "actionpack -> lib -> action_dispatch -> routing -> roule_set:get:137:: name #{name} .. routes[name] #{routes[name.to_sym]}"
+
+          routes[name.to_sym]
         end
 
         def key?(name)
