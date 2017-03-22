@@ -112,6 +112,9 @@ module ActionDispatch
             @url_helpers_module.send  :undef_method, url_name
           end
           routes[key] = route
+          puts "routes : #{routes}"
+          puts "route[key] : #{route[key]}"
+          puts "key : #{key}"
           puts "route : #{route}"
           define_url_helper @path_helpers_module, route, path_name, route.defaults, name, PATH
           define_url_helper @url_helpers_module,  route, url_name,  route.defaults, name, UNKNOWN
