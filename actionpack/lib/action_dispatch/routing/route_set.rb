@@ -121,10 +121,13 @@ module ActionDispatch
           url_name  = :"#{name}_url"
 
           if routes.key? key
+            puts "inside if routes.key? key #{key}"
             @path_helpers_module.send :undef_method, path_name
             @url_helpers_module.send  :undef_method, url_name
           end
           routes[key] = route
+          puts "actionpack -> lib -> action_dispatch -> routing -> roule_set:add:128:: route #{route} .. routes[key] #{routes[key]}"
+
           define_url_helper @path_helpers_module, route, path_name, route.defaults, name, PATH
           define_url_helper @url_helpers_module,  route, url_name,  route.defaults, name, UNKNOWN
 
